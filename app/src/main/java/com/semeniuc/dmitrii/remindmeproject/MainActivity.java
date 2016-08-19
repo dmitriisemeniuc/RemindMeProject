@@ -11,7 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.semeniuc.dmitrii.remindmeproject.adapter.TabsPagerFragmentAdapter;
+import com.semeniuc.dmitrii.remindmeproject.adapter.TabsFragmentAdapter;
 
 /**
  * Created by Dmitrii on 8/18/2016.
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     private void initTabs() {
 
         viewPager = (ViewPager) findViewById(R.id.viewPager);
-        TabsPagerFragmentAdapter adapter = new TabsPagerFragmentAdapter(getSupportFragmentManager());
+        TabsFragmentAdapter adapter = new TabsFragmentAdapter(this, getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
