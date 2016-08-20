@@ -21,7 +21,7 @@ public class IdeasFragment extends AbstractTabFragment {
         IdeasFragment fragment = new IdeasFragment();
         fragment.setArguments(args);
         fragment.setContext(context);
-        fragment.setTitle(context.getString(R.string.tab_item_history));
+        fragment.setTitle(context.getString(R.string.tab_item_ideas));
 
         return fragment;
     }
