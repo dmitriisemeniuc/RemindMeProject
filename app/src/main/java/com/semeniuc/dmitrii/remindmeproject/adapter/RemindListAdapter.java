@@ -12,9 +12,6 @@ import com.semeniuc.dmitrii.remindmeproject.dto.RemindDTO;
 
 import java.util.List;
 
-/**
- * Created by Dmitrii on 8/19/2016.
- */
 public class RemindListAdapter extends RecyclerView.Adapter<RemindListAdapter.RemindViewHolder> {
 
     private List<RemindDTO> data;
@@ -39,7 +36,7 @@ public class RemindListAdapter extends RecyclerView.Adapter<RemindListAdapter.Re
 
     @Override
     public int getItemCount() {
-        return data.size();
+        return data != null ? data.size() : 0;
     }
 
     public static class RemindViewHolder extends RecyclerView.ViewHolder {
@@ -55,4 +52,7 @@ public class RemindListAdapter extends RecyclerView.Adapter<RemindListAdapter.Re
         }
     }
 
+    public void setData(List<RemindDTO> data) {
+        this.data = data;
+    }
 }
